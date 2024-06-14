@@ -99,26 +99,47 @@ Esempio:
 ```
 
 ## Dettagli del Codice
+
+### Gestione delle Comunicazioni di Rete
+
+Il codice include funzionalità avanzate per la gestione delle comunicazioni di rete tramite socket. Questo permette al client di stabilire connessioni con i peer e scambiare dati in modo efficiente durante il download dei pezzi del torrent.
+
+### Download Parallelo dei Pezzi
+
+Il client supporta il download parallelo dei pezzi utilizzando thread. Questo approccio migliora le prestazioni complessive del download permettendo al client di scaricare più pezzi contemporaneamente da diversi peer.
+
+### Gestione delle Operazioni di I/O
+
+Il client gestisce in modo efficiente le operazioni di I/O per la scrittura dei file scaricati. Ciò assicura che i dati dei pezzi scaricati siano correttamente salvati nel file locale, mantenendo l'integrità del torrent.
+
 ### Decodifica e Codifica Bencode
+
 Il file include funzioni per la decodifica (`decode_bencode` e `decode_bencode_helper`) e codifica (`encode_bencode`) di dati bencode.
 
 ### Analisi del File Torrent
+
 La funzione `parse_torrent` legge e decodifica un file torrent.
 
 ### Hash delle Informazioni
+
 La funzione `get_info_hash` calcola l'hash SHA-1 del dizionario "info" del file torrent.
 
 ### Comunicazione di Rete
+
 Funzioni come `handshake_message`, `perform_handshake`, e `get_peers` gestiscono le interazioni di rete con i peer.
 
 ### Download dei Pezzi
+
 Il codice include la logica per richiedere e scaricare specifici pezzi del file torrent da peer.
 
 ### Funzione Principale
+
 La funzione `main` gestisce i vari comandi disponibili per decodificare dati bencode, mostrare informazioni sul torrent, elencare i peer, eseguire handshake, scaricare pezzi specifici o l'intero file.
 
 ## Contributi
+
 Sono benvenuti contributi sotto forma di issue e pull request. Si prega di seguire le convenzioni di codifica e includere test appropriati per le nuove funzionalità.
 
 ## Licenza
+
 Questo progetto è distribuito sotto la licenza MIT. Vedi il file LICENSE per maggiori dettagli.
